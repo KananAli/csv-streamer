@@ -18,6 +18,7 @@
     <modules>
         <module>csv-producer</module>
         <module>csv-consumer</module>
+        <module>csv-common</module>
     </modules>
 
 </project>

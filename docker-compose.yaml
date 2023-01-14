@@ -1,0 +1,42 @@
+version: '3'
+services:
+  csv-producer:
+    container_name: csv-producer
+    build:
+      context: csv-producer
+      dockerfile: Dockerfile
+    image: csv-producer:latest
+    ports:
+      - 8080:8080
+  csv-consumer-1:
+    container_name: csv-consumer-1
+    build:
+      context: csv-consumer
+      dockerfile: Dockerfile
+    image: csv-consumer:latest
+    ports:
+      - 5001:8080
+  csv-consumer-2:
+    container_name: csv-consumer-2
+    build:
+      context: csv-consumer
+      dockerfile: Dockerfile
+    image: csv-consumer:latest
+    ports:
+      - 5002:8080
+  csv-consumer-3:
+    container_name: csv-consumer-3
+    build:
+      context: csv-consumer
+      dockerfile: Dockerfile
+    image: csv-consumer:latest
+    ports:
+      - 5003:8080
+  nats:
+    container_name: nats
+    image: nats
+    expose:
+      - 4222
+    ports:
+      - 8222:8222
+

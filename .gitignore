@@ -10,3 +10,11 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 .project
 .classpath
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+#src/main/generated
